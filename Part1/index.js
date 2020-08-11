@@ -82,13 +82,20 @@ function play(clickedID) {
 // function resetGame(){
 //     board = []
 // getelementby id 0-8 - set intertext to be empty string
-// function resetGame() {
-//     let nodeList = document.getElementsByTagName('td')
-//     for (i = 0; i < nodeList.length; i++) {
-//         nodeList[i] = "empty"
-//     }
-//     return nodeList
-// }
+function resetGame() {
+    let emptiness = document.getElementsByTagName('td')
+    emptiness[0].innerText =' '
+    emptiness[1].innerText =' '
+    emptiness[2].innerText =' '
+    emptiness[3].innerText =' '
+    emptiness[4].innerText =' '
+    emptiness[5].innerText =' '
+    emptiness[6].innerText =' '
+    emptiness[7].innerText =' '
+    emptiness[8].innerText =' '
+    board = []
+    console.log(emptiness)
+}
 
 
 
