@@ -21,8 +21,8 @@ function play(clickedID) {
 
 
 
-    
-    
+
+
     const topLeft = board[0];
     const topCenter = board[1];
     const topRight = board[2];
@@ -32,13 +32,12 @@ function play(clickedID) {
     const bottomLeft = board[6];
     const bottomCenter = board[7];
     const bottomRight = board[8];
-    
-    
-    console.log(topLeft,topCenter,topRight)
+
+
+    console.log(topLeft, topCenter, topRight)
     if (topLeft !== undefined && topLeft === topCenter && topLeft === topRight) {
         alert(`${topLeft} is the winner`);
-        console.log('Winner');
-        board = []
+        return resetGame();
     }
     if (middleLeft !== undefined && middleLeft === middleCenter && middleLeft === middleRight) {
         alert(`${middleLeft} is the winner`);
@@ -59,7 +58,7 @@ function play(clickedID) {
         alert(`${topRight} is the winner`);
         // return;
     }
-    
+
     if (topLeft !== undefined && topLeft === middleCenter && topLeft === bottomRight) {
         alert(`${topLeft} is the winner`);
         // return;
@@ -68,7 +67,7 @@ function play(clickedID) {
         alert(`${bottomLeft} is the winner`);
         // return;
     }
-    
+
     let boardFull = true;
     for (let i = 0; i <= 8; i++) {
         if (board[i] === undefined) {
@@ -80,9 +79,17 @@ function play(clickedID) {
     }
 }
 
-   // function resetGame(){
+// function resetGame(){
 //     board = []
 // getelementby id 0-8 - set intertext to be empty string
+// function resetGame() {
+//     let nodeList = document.getElementsByTagName('td')
+//     for (i = 0; i < nodeList.length; i++) {
+//         nodeList[i] = "empty"
+//     }
+//     return nodeList
+// }
+
 
 
 
@@ -91,7 +98,7 @@ function play(clickedID) {
     //             tile.removeEventListener("click", insertToken);
     //             });
     //             }
-            
+
 // for (let i=0; i<9; i++) {
 //     ttt.board.push(null);
 //     var square = document.createElement("div");
